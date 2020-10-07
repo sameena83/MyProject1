@@ -3,8 +3,8 @@ package moneytracker.com;
 import java.util.Date;
 
 public class Income {
-    private Long incomeId=System.currentTimeMillis();
-    private Long incCategoryId;
+
+    private String incomeType;
     private Double amount;
     private Date date;
     private String description;
@@ -15,54 +15,49 @@ public class Income {
 
 
 
-    public Income(Long incCategoryId,Double amount,Date date,String description){
-        this.incCategoryId=incCategoryId;
+    public Income(String incomeType,Double amount,Date date,String description){
+        this.incomeType=incomeType;
         this.amount=amount;
         this.date=date;
         this.description=description;
     }
 
-    public void setIncCategoryId(Long incCategoryId) {
-        this.incCategoryId = incCategoryId;
-    }
-    public Long getIncCategoryId(Long incCategoryId) {
-        return incCategoryId;
-    }
+
 
     public Date getDate() {
         return date;
+    }
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     public Double getAmount() {
         return amount;
     }
-
-    public Long getExpCategoryId() {
-        return incCategoryId;
+    public void setAmount(Double amount) {
+        this.amount = amount;
     }
 
-    public Long getIncomeId() {
-        return incomeId;
+    public String  getIncomeType() {
+        return incomeType;
     }
-    public void setIncomeId(Long incomeId) {
-        this.incomeId=incomeId;
+
+    public void setIncomeType(String incomeType) {
+        this.incomeType = incomeType;
     }
 
     public String getDescription() {
         return description;
     }
-
-    public void setAmount(Double amount) {
-        this.amount = amount;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
     public void setDescription(String description) {
         this.description = description;
     }
+
+
+
+
+
+
 
 
 

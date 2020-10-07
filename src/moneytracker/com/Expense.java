@@ -3,12 +3,10 @@ package moneytracker.com;
 import java.util.Date;
 
 public class Expense {
-    private Long expenseId=System.currentTimeMillis();
-    private Long expCategoryId;
+
+    private String expenseType;//from expense category
     private Double amount;
     private Date date;
-    private String description;
-
 
     public Expense(){
 
@@ -16,51 +14,62 @@ public class Expense {
 
 
 
-    public Expense(Long expCategoryId,Double amount,Date date,String description){
-        this.expCategoryId=expCategoryId;
-        this.amount=amount;
-        this.date=date;
-        this.description=description;
+    public Expense(String expenseType){
+        this.expenseType=expenseType;
+
     }
 
-    public void setExpCategoryId(Long expCategoryId) {
-        this.expCategoryId = expCategoryId;
+    public Expense(Double amount){
+        this.amount=amount;
+
     }
+
+    public Expense(String expenseType,Double amount){
+        this.expenseType=expenseType;
+        this.amount=amount;
+
+    }
+
+
+
+
+
+
+    public Expense(String  expenseType,Double amount,Date date){
+        this.expenseType=expenseType;
+        this.amount=amount;
+        this.date=date;
+
+    }
+
+
 
     public Date getDate() {
         return date;
+    }
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     public Double getAmount() {
         return amount;
     }
-
-    public Long getExpCategoryId() {
-        return expCategoryId;
-    }
-
-    public Long getExpenseId() {
-        return expenseId;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
     public void setAmount(Double amount) {
         this.amount = amount;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+
+    public String getExpenseType() {
+        return expenseType;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setExpenseType(String expenseType) {
+        this.expenseType = expenseType;
     }
 
-    public void setExpenseId(Long expenseId) {
-        this.expenseId = expenseId;
-    }
+
+
+
+
 
 }
