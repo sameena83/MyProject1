@@ -1,8 +1,6 @@
 package moneytracker.com;
 import java.io.IOException;
-import java.util.Date;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class TrackManage {
 
@@ -10,16 +8,24 @@ public class TrackManage {
     //storeData object provided by static method,how many times you call this method,you get only one storeData
     //object,since StoreData is a singleton object here
     Repository repo=Repository.getRepository();
+    ReportService  reportService=new ReportService();
 
     //global
     private int  choice;
     int i;
+
+
+    public TrackManage()
+    {
+        prepareSampleData();//this function is used to add data to chek the funcyion,i will delete it after checking
+    }
     //when we call the show menu method a finite loop will go and it prints the menu
     public void showMenu() throws IOException {
         while(true){
             printMenu();
             switch (choice){
                 case 0:
+                    System. out. flush();
                     System.exit(0);
                     break;
                 case 1:
@@ -49,6 +55,7 @@ public class TrackManage {
 
 
                 case 5:
+
                     onViewMonthlyExpenseList();
                     pressAnyKeyToContinue();
                     break;
@@ -121,12 +128,12 @@ public class TrackManage {
 
         System.out.println("----------------------------OptionList For Income Tracking--------------------------------------");
 
-        System.out.println(" 7. Add New Expense");
-        System.out.println(" 8. View List of Expense ");
-        System.out.println(" 9. View list of Expense by Category ");
-        System.out.println(" 10. Expense list by date");
-        System.out.println(" 11. Monthly Expense list");
-        System.out.println(" 12. Yearly Expense list");
+        System.out.println(" 7. Add New Income");
+        System.out.println(" 8. View List of Incomes");
+        System.out.println(" 9. View list of Incomes by Category ");
+        System.out.println(" 10. Income list by date");
+        System.out.println(" 11. Monthly Income list");
+        System.out.println(" 12. Yearly Income  list");
         System.out.println("Press 0 to exit");
         System.out.println("Select the options");
         choice = in.nextInt();
@@ -147,8 +154,12 @@ public class TrackManage {
         Expense ex=new Expense();
         ex.setAmount(amount);
         ex.setExpenseType(expenseName);
+        System.out.println("Enter Date(DD/MM/YYYY):");
+        in.nextLine();
+        String dateAsString=in.nextLine();
+        Date date= DateUtility.stringToDate(dateAsString);
 
-        Date date=new Date();
+        //Date date=new Date();
         ex.setDate(date);
         //store expense object in repository
         repo.expenses.add(ex);
@@ -167,22 +178,30 @@ public class TrackManage {
         List<Expense> list=repo.expenses;
         for(i=0;i<=list.size()-1;i++){
             Expense ex=list.get(i);
-            System.out.println((i+1)+" : "+ex.getExpenseType()+"  ,"+ ex.getAmount()+" ,"+ex.getDate());
+            String dateString=DateUtility.dateToString(ex.getDate());
+            System.out.println((i+1)+" : "+ex.getExpenseType()+"  ,"+ ex.getAmount()+" ,"+dateString);
         }
     }
 
     private void onViewExpenseListByCategory(){
         System.out.println("view expense list by category");
+        Map<String,Double>resultMap=reportService.calculateCategoryExpense();
+        Set<String>category=resultMap.keySet();
+        for(String categories:category){
+            System.out.println(categories+":"+resultMap.get(categories));
+        }
+
+
 
     }
-    Double getExpenseAmountByCategory(String name){
-        for(Expense e: repo.expenses) {
-            if(e.getExpenseType().equals(name)){
-                return e.getAmount();
-            }
-        }
-        return null; //invalid expense name
-    }
+    //* *Double getExpenseAmountByCategory(String name){
+       // for(Expense e: repo.expenses) {
+            //if(e.getExpenseType().equals(name)){
+                //return e.getAmount();
+            //}
+        //}*//
+        //return null; //invalid expense name
+    //}
 
     private void onViewExpenseListByDate(){
         System.out.println("view expense list by date");
@@ -190,18 +209,61 @@ public class TrackManage {
 
     private  void onViewMonthlyExpenseList(){
         System.out.println("view monthly expense list ");
+        Map<String,Double> result= reportService.calculateMonthlyExpense();
+        Set<String> keys=result.keySet();
+        for(String yearMonth  :keys){
+            //String [] arr=yearMonth.split(",");
+            //String year=arr[0];
+            //Integer  monthNo= Integer.valueOf(arr[1]);
+            //String monthName=DateUtility.getMonthName(monthNo);
+
+            System.out.println(yearMonth +" " + result.get(yearMonth));
+        }
 
     }
     private  void onViewYearlyExpenseList(){
-        System.out.println("view yEARLY expense list ");
+        System.out.println(" yEARLY expense list ");
+        Map<Integer,Double>resultMap=reportService.calculateYearlyExpense();
+        Set<Integer>years =resultMap.keySet();
+        for(Integer year:years){
+            System.out.println(year+":"+resultMap.get(year));
+        }
 
   }
     private void onAddNewIncome(){
-      System.out.println("new income");
+
+        in.nextLine();
+        System.out.println("Enter new  Income category ");
+        String incomeName=in.nextLine();
+        //Expense exp1=new Expense(obj1);
+        System.out.print("Enter Income Amount");
+        Double amount=in.nextDouble();
+        Income inc=new Income();
+        inc.setAmount(amount);
+        inc.setIncomeType(incomeName);
+
+        System.out.print("Enter Date(DD/MM/YYYY):");
+        in.nextLine();
+        String dateAsString1=in.nextLine();
+        Date date1= DateUtility.stringToDate(dateAsString1);
+
+
+
+        inc.setDate(date1);
+        //store expense object in repository
+        repo.incomes.add(inc);
+        System.out.println("Success:New Income Added");
+
   }
-   private void onViewIncomeList(){
-      System.out.println("income list");
+   private void onViewIncomeList()throws ArrayIndexOutOfBoundsException{
+       System.out.println("The Income available in the list are :");
+       List<Income> list1=repo.incomes;
+       for(i=0;i<=list1.size()-1;i++){
+           Income in=list1.get(i);
+           System.out.println((i+1)+" : "+in.getIncomeType()+"  ,"+ in.getAmount()+" ,"+in.getDate());
+
   }
+   }
    private void onViewIncomeListByCategory(){
       System.out.println("view Income list by category");
   }
@@ -219,7 +281,44 @@ public class TrackManage {
 
         }
 
+
+    public static void wait(int  ms)
+    {
+        try
+        {
+            Thread.sleep(ms);
+        }
+        catch(InterruptedException ex)
+        {
+            Thread.currentThread().interrupt();
+        }
+    }
+
+
+    public void prepareSampleData()  {
+        Expense party =new Expense("HouseParty",1000.00,DateUtility.stringToDate("12/12/2019"));
+        wait(100);
+        Expense shopping =new Expense("shopping",2000.00,DateUtility.stringToDate("12/1/2020"));
+        wait(100);
+        Expense gift =new Expense("gift",3000.00,DateUtility.stringToDate("1/1/2020"));
+        Expense gift1 =new Expense("gift",3000.00,DateUtility.stringToDate("11/1/2020"));
+        Expense gift3 =new Expense("gift",3000.00,DateUtility.stringToDate("12/1/2020"));
+        repo.expenses.add(party);
+        repo.expenses.add(shopping);
+        repo.expenses.add(gift);
+        repo.expenses.add(gift1);
+        repo.expenses.add(gift3);
+
+
+
+
+
+
+    }
+
           }
+
+
 
 
 

@@ -19,7 +19,7 @@ public class Income {
         this.incomeType=incomeType;
         this.amount=amount;
         this.date=date;
-        this.description=description;
+
     }
 
 
@@ -45,14 +45,6 @@ public class Income {
     public void setIncomeType(String incomeType) {
         this.incomeType = incomeType;
     }
-
-    public String getDescription() {
-        return description;
-    }
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
 
 
 

@@ -9,7 +9,7 @@ public class Repository {
 
     //
     private static Repository repository;
-    //  here object is StoreData and the the instance is created
+    //  here object is repository and the the instance is created
     public List<Expense> expenses=new ArrayList<>();
 
     public List<Income>incomes=new ArrayList<>();
@@ -26,7 +26,7 @@ public class Repository {
     }
 
     //TO CALL PRIVATE CONSTRUCTOR,STATIC ONE,if you want to create object ,call this method and this method will provide
-    //you with object conditionally
+    //you with object conditionally after checking whether the repository is null or not.
     public  static Repository getRepository(){
 
           //if collection is null .it creates
