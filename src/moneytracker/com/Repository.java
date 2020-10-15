@@ -13,6 +13,7 @@ public class Repository {
     public List<Expense> expenses=new ArrayList<>();
 
     public List<Income>incomes=new ArrayList<>();
+    //public List<Savings>income=new ArrayList<>();
 
 
     //public List<IncomeType>incomeTypes;

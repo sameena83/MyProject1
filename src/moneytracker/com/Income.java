@@ -1,13 +1,14 @@
 package moneytracker.com;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Income {
+public class Income implements Serializable {
 
     private String incomeType;
     private Double amount;
     private Date date;
-    private String description;
+
 
     public Income(){
 
@@ -15,11 +16,11 @@ public class Income {
 
 
 
-    public Income(String incomeType,Double amount,Date date,String description){
+    public Income(String incomeType,Double amount,Date date){
         this.incomeType=incomeType;
         this.amount=amount;
         this.date=date;
-        this.description=description;
+
     }
 
 
@@ -46,12 +47,6 @@ public class Income {
         this.incomeType = incomeType;
     }
 
-    public String getDescription() {
-        return description;
-    }
-    public void setDescription(String description) {
-        this.description = description;
-    }
 
 
 

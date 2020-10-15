@@ -1,14 +1,20 @@
 package moneytracker.com;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Expense {
+public class Expense implements Serializable {
 
     private String expenseType;//from expense category
     private Double amount;
     private Date date;
 
     public Expense(){
+
+    }
+
+    public Expense(Double amount){
+        this.amount=amount;
 
     }
 
@@ -19,10 +25,6 @@ public class Expense {
 
     }
 
-    public Expense(Double amount){
-        this.amount=amount;
-
-    }
 
     public Expense(String expenseType,Double amount){
         this.expenseType=expenseType;
@@ -62,7 +64,6 @@ public class Expense {
     public String getExpenseType() {
         return expenseType;
     }
-
     public void setExpenseType(String expenseType) {
         this.expenseType = expenseType;
     }
