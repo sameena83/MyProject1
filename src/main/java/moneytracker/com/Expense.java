@@ -1,69 +1,116 @@
 package moneytracker.com;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
+
+/**
+ * This class is the expense class of Finance Tracker
+ *
+ */
 
 public class Expense implements Serializable {
 
     private String expenseType;
-    private Double amount;
-    private Date date;
+    private double amount;
+    private LocalDate date;
+
+
 
     public Expense(){
 
     }
 
-    public Expense(Double amount){
+    /**
+     *
+     * @param amount
+     */
+
+    public Expense(double amount){
         this.amount=amount;
 
     }
 
-
+    /**
+     *
+     * @param expenseType
+     */
 
     public Expense(String expenseType){
         this.expenseType=expenseType;
 
     }
 
+    /**
+     *
+     * @param expenseType
+     * @param amount
+     */
 
-    public Expense(String expenseType,Double amount){
+
+    public Expense(String expenseType,double amount){
         this.expenseType=expenseType;
         this.amount=amount;
 
     }
 
 
-
-
-
-
-    public Expense(String  expenseType,Double amount,Date date){
+    /**
+     *
+     * @param expenseType
+     * @param amount
+     * @param date
+     */
+    public Expense(String  expenseType,double amount,LocalDate date){
         this.expenseType=expenseType;
         this.amount=amount;
         this.date=date;
 
     }
 
+    /**
+     *
+     * @return date
+     */
 
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
-    public void setDate(Date date) {
+
+    /**
+     *
+     * @param date
+     */
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
-    public Double getAmount() {
+    /**
+     *
+     * @return amount
+     */
+
+    public double getAmount() {
         return amount;
     }
-    public void setAmount(Double amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 
+    /**
+     *
+     * @return expensetype
+     */
 
     public String getExpenseType() {
         return expenseType;
     }
+
+    /**
+     *
+     * @param expenseType
+     */
     public void setExpenseType(String expenseType) {
         this.expenseType = expenseType;
     }

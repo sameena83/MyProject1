@@ -1,37 +1,46 @@
 package moneytracker.com;
 import java.io.*;
+import java.time.LocalDate;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+/**
+ * The MyFinanceTrack program implements an application that
+ * simply do  Finance tracking and query can be done through console.
+ * Track manage class do all the operations related to Expenses and Incomes
+ *
+ * @author  Haleemath Sameena
+ * @version 1.0
+ * @since   2020-10-23
+ */
 
 public class TrackManage {
+
 
     private final Scanner in=new Scanner(System.in);
     //storeData object provided by static method,how many times you call this method,you get only one storeData
     //object,since StoreData is a singleton object here
-    Repository repo = Repository.getRepository(); //tODo I didn;t like this
-    ReportService  reportService=new ReportService();
+    private ReportService repo;
 
     //global
     private int  choice;
     int i;
 
 
-  /**public TrackManage()
-    {
-        prepareSampleData();//this function is used to add data to chek the function,i will delete it after checking
-    }*/
-    public TrackManage() throws ClassNotFoundException {
-        prepareSampleData();//this function is used to add data to chek the function,i will delete it after checking
-        try {
-            restoreRepository();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+    public TrackManage()  {
+        restoreRepository();
+        //prepareSampleData();//this function is used to add data to chek the function,i will delete it after checking
     }
 
     //when we call the show menu method a finite loop will go and it prints the menu
-    public void showMenu() throws IOException {
+
+    /**
+     *
+     * @throws IOException
+     *
+     */
+    public void  showMenu() throws IOException {
         while(true){
             show();
             //printMenu();
@@ -122,10 +131,18 @@ public class TrackManage {
         }
 
     }
+
+    /**
+     *  onExit will help to exit
+     */
     private void onExit(){
-        //persistRepository();
+        persistRepository();
         System.exit(0);
     }
+
+    /**
+     * shows menu of operations
+     */
 
     public void show(){
         System.out.println("*************Welcome to MoneyTracker***********");
@@ -137,9 +154,10 @@ public class TrackManage {
             System.out.println(" 1. Add New Expense");
             System.out.println(" 2. View List of Expense ");
             System.out.println(" 3. View list of Expense by Category ");
-
             System.out.println(" 4. Monthly Expense list");
             System.out.println(" 5. Yearly Expense list");
+            System.out.println("Press 0 to exit");
+            System.out.println("Select the options");
             choice = in.nextInt();
 
         }else if(choice1 ==11){
@@ -158,6 +176,7 @@ public class TrackManage {
             System.out.println("enter a valid  options");
             in.nextInt();
         }
+
     }
 
 
@@ -195,6 +214,10 @@ public class TrackManage {
         var read = System.in.read();
     }
 
+    /**
+     * to add new expenses
+     */
+
     private void onAddNewExpense(){
         in.nextLine();
         System.out.println("Enter new  expense Name");
@@ -208,12 +231,12 @@ public class TrackManage {
         System.out.println("Enter Date(DD/MM/YYYY):");
         in.nextLine();
         String dateAsString=in.nextLine();
-        Date date= DateUtility.stringToDate(dateAsString);
+        LocalDate date= DateUtility.stringToDate(dateAsString);
 
         //Date date=new Date();
         ex.setDate(date);
         //store expense object in repository
-        repo.expenses.add(ex);
+        repo.getExpenses().add(ex);
         System.out.println("Success:Expense Added");
 
         //Expense obj = new Expense(obj1,obj2);
@@ -224,9 +247,15 @@ public class TrackManage {
 
     }
 
+    /**
+     *
+     * @throws ArrayIndexOutOfBoundsException
+     * to view expense list
+     */
+
     private void onViewExpenseList()throws ArrayIndexOutOfBoundsException{
         System.out.println("The expenses available in the list are :");
-        List<Expense> list=repo.expenses;
+        List<Expense> list=repo.getExpenses();
         for(i=0;i<=list.size()-1;i++){
             Expense ex=list.get(i);
             String dateString=DateUtility.dateToString(ex.getDate());
@@ -234,9 +263,13 @@ public class TrackManage {
         }
     }
 
+    /**
+     * to view expense list by category
+     */
+
     private void onViewExpenseListByCategory(){
         System.out.println("view expense list by category");
-        Map<String,Double>resultMap=reportService.calculateCategoryExpense();
+        Map<String,Double>resultMap= repo.calculateCategoryExpense();
         Set<String>category=resultMap.keySet();
         for(String categories:category){
             System.out.println(categories+":"+resultMap.get(categories));
@@ -258,9 +291,13 @@ public class TrackManage {
         //System.out.println("view expense list by date");
     //}
 
+    /**
+     * to view monthly expense list
+     */
+
     private  void onViewMonthlyExpenseList(){
         System.out.println("view monthly expense list ");
-        Map<String,Double> result= reportService.calculateMonthlyExpense();
+        Map<String,Double> result= repo.calculateMonthlyExpense();
         Set<String> keys=result.keySet();
         for(String yearMonth  :keys){
             //String [] arr=yearMonth.split(",");
@@ -272,15 +309,23 @@ public class TrackManage {
         }
 
     }
+
+    /**
+     * to view yearly expense list
+     */
     private  void onViewYearlyExpenseList(){
         System.out.println(" Yearly expense list ");
-        Map<Integer,Double>resultMap=reportService.calculateYearlyExpense();
+        Map<Integer,Double>resultMap= repo.calculateYearlyExpense();
         Set<Integer>years =resultMap.keySet();
         for(Integer year:years){
             System.out.println(year+":"+resultMap.get(year));
         }
 
     }
+
+    /**
+     * to add new income
+     */
     private void onAddNewIncome(){
 
         in.nextLine();
@@ -296,19 +341,25 @@ public class TrackManage {
         System.out.print("Enter Date(DD/MM/YYYY):");
         in.nextLine();
         String dateAsString1=in.nextLine();
-        Date date1= DateUtility.stringToDate(dateAsString1);
+        LocalDate date1= DateUtility.stringToDate(dateAsString1);
 
 
 
         inc.setDate(date1);
         //store expense object in repository
-        repo.incomes.add(inc);
+        repo.getIncomes().add(inc);
         System.out.println("Success:New Income Added");
 
     }
+
+    /**
+     *
+     * @throws ArrayIndexOutOfBoundsException
+     * to view income list
+     */
     private void onViewIncomeList()throws ArrayIndexOutOfBoundsException{
         System.out.println("The Income available in the list are :");
-        List<Income> list1=repo.incomes;
+        List<Income> list1=repo.getIncomes();
         for(i=0;i<=list1.size()-1;i++){
             Income in=list1.get(i);
 
@@ -318,10 +369,14 @@ public class TrackManage {
 
         }
     }
+
+    /**
+     * to view income list by category
+     */
     private void onViewIncomeListByCategory(){
         System.out.println("view Income list by category");
 
-        Map<String,Double>resultMap=reportService.calculateCategoryIncome();
+        Map<String,Double>resultMap= repo.calculateCategoryIncome();
         Set<String>category=resultMap.keySet();
         for(String categories:category){
             System.out.println(categories+":"+resultMap.get(categories));
@@ -333,9 +388,13 @@ public class TrackManage {
         //System.out.println("view Income list by date");
     //}
 
+    /**
+     * to view monthly income list
+     */
+
     private  void onViewMonthlyIncomeList(){
         System.out.println("view monthly Income list ");
-        Map<String,Double> result= reportService.calculateMonthlyIncome();
+        Map<String,Double> result= repo.calculateMonthlyIncome();
         Set<String> keys=result.keySet();
         for(String yearMonth  :keys){
             //String [] arr=yearMonth.split(",");
@@ -347,9 +406,13 @@ public class TrackManage {
         }
 
     }
+
+    /**
+     * to view yearly income list
+     */
     private  void onViewYearlyIncomeList(){
         System.out.println(" Yearly Income list ");
-        Map<Integer, Double> resultMap=reportService.calculateYearlyIncome();
+        Map<Integer, Double> resultMap= repo.calculateYearlyIncome();
         Set<Integer> years =resultMap.keySet();
         for(Integer year:years){
             System.out.println(year+":"+resultMap.get(year));
@@ -369,53 +432,67 @@ public class TrackManage {
         }
     }
 
+    /**
+     * to prepare sample data to store to the disk
+     */
+
 
     public void prepareSampleData()  {
         Expense party =new Expense("HouseParty",1000.00,DateUtility.stringToDate("12/12/2019"));
         wait(100);
-        Expense shopping =new Expense("shopping",2000.00,DateUtility.stringToDate("12/1/2020"));
+        Expense shopping =new Expense("shopping",2000.00,DateUtility.stringToDate("12/01/2020"));
         wait(100);
-        Expense gift =new Expense("gift",3000.00,DateUtility.stringToDate("1/1/2020"));
-        Expense gift1 =new Expense("gift",3000.00,DateUtility.stringToDate("11/1/2020"));
-        Expense gift3 =new Expense("gift",3000.00,DateUtility.stringToDate("12/1/2020"));
-        repo.expenses.add(party);
-        repo.expenses.add(shopping);
-        repo.expenses.add(gift);
-        repo.expenses.add(gift1);
-        repo.expenses.add(gift3);
+        Expense gift =new Expense("gift",3000.00,DateUtility.stringToDate("01/01/2020"));
+        Expense gift1 =new Expense("gift",3000.00,DateUtility.stringToDate("11/01/2020"));
+        Expense gift3 =new Expense("gift",3000.00,DateUtility.stringToDate("12/01/2020"));
+        repo.getExpenses().add(party);
+        repo.getExpenses().add(shopping);
+        repo.getExpenses().add(gift);
+        repo.getExpenses().add(gift1);
+        repo.getExpenses().add(gift3);
 
 
-        Income  salary =new Income("Salary",20000.00,DateUtility.stringToDate("1/5/2020"));
+        Income  salary =new Income("Salary",20000.00,DateUtility.stringToDate("01/05/2020"));
         wait(100);
-        Income  pBenefit =new Income("PBenefit",1000.00,DateUtility.stringToDate("1/5/2020"));
+        Income  pBenefit =new Income("PBenefit",1000.00,DateUtility.stringToDate("01/05/2020"));
         wait(100);
         //Expense shopping =new Expense("shopping",2000.00,DateUtility.stringToDate("12/1/2020"));
-        Income  salary1 =new Income("Salary",20000.00,DateUtility.stringToDate("1/6/2020"));
+        Income  salary1 =new Income("Salary",20000.00,DateUtility.stringToDate("01/06/2020"));
         wait(100);
-        Income  salary3 =new Income("Salary",20000.00,DateUtility.stringToDate("1/7/2020"));
+        Income  salary3 =new Income("Salary",20000.00,DateUtility.stringToDate("01/07/2020"));
         wait(100);
-        Income  pBenefit1 =new Income("PBenefit",1000.00,DateUtility.stringToDate("1/6/2020"));
+        Income  pBenefit1 =new Income("PBenefit",1000.00,DateUtility.stringToDate("01/06/2020"));
         wait(100);
-        Income  pBenefit2 =new Income("PBenefit",1000.00,DateUtility.stringToDate("1/7/2020"));
+        Income  pBenefit2 =new Income("PBenefit",1000.00,DateUtility.stringToDate("01/07/2020"));
 
-        repo.incomes.add(salary);
-        repo.incomes.add(salary1);
-        repo.incomes.add(salary3);
-        repo.incomes.add(pBenefit);
-        repo.incomes.add(pBenefit1);
-        repo.incomes.add(pBenefit2);
+        repo.getIncomes().add(salary);
+        repo.getIncomes().add(salary1);
+        repo.getIncomes().add(salary3);
+        repo.getIncomes().add(pBenefit);
+        repo.getIncomes().add(pBenefit1);
+        repo.getIncomes().add(pBenefit2);
 
 
 
 
 
     }
+
+    /**
+     * to write to the file
+     */
 
 
     private void persistRepository(){
-        serialize("expenses.ser",repo.expenses);
-        serialize("incomes.ser",repo.incomes);
+        serialize("expenses.ser", repo.getExpenses());
+        serialize("incomes.ser", repo.getIncomes());
     }
+
+    /**
+     *
+     * @param file
+     * @param obj
+     */
 
     public void serialize(String file,Object obj){
         try{
@@ -432,6 +509,12 @@ public class TrackManage {
         }
 
     }
+
+    /**
+     *
+     * @param file
+     * @return obj
+     */
     public Object deserialize(String file)  {
         Object obj = null;
         try {
@@ -452,16 +535,13 @@ public class TrackManage {
         return obj;
 
     }
-    private void restoreRepository() throws IOException, ClassNotFoundException {
-        List<Expense> expenses = (ArrayList<Expense>) deserialize("expenses.ser");
-        List<Expense> incomes =(ArrayList<Expense>) deserialize("incomes.ser");
-        if(expenses!=null){
-            repo.expenses=expenses;
-        }
-        if(incomes!=null){
-            repo.expenses=expenses;
 
-        }
+    private void restoreRepository()
+    {
+        Object  expenses = deserialize("expenses.ser");
+        Object incomes  = deserialize("incomes.ser");
+        repo = new ReportService(incomes, expenses);
+
     }
 
 }

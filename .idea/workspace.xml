@@ -5,19 +5,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9aa6a1c-c724-4a03-8dce-22a81e036986" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/expenses.ser" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/incomes.ser" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/moneytracker/com/DateUtility.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/moneytracker/com/DateUtility.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/moneytracker/com/Expense.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/moneytracker/com/Expense.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/moneytracker/com/Income.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/moneytracker/com/Income.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/moneytracker/com/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/moneytracker/com/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/moneytracker/com/ReportService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/moneytracker/com/ReportService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/moneytracker/com/Repository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/moneytracker/com/TrackManage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/moneytracker/com/TrackManage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/moneytracker/com/DateUtilityTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/moneytracker/com/DateUtilityTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/moneytracker/com/ExpenseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/moneytracker/com/ExpenseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/moneytracker/com/IncomeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/moneytracker/com/IncomeTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/moneytracker/com/ReportServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/moneytracker/com/ReportServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/moneytracker/com/TrackManageTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/moneytracker/com/TrackManageTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/moneytracker.com.DateUtilityTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/moneytracker.com.ExpenseTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/moneytracker.com.IncomeTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/moneytracker.com.ReportServiceTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/moneytracker.com.ReportServiceTest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/moneytracker.com.RepositoryTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/moneytracker.com.TrackManageTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/moneytracker.com.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/moneytracker.com.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-moneytracker.com.DateUtilityTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-moneytracker.com.ExpenseTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-moneytracker.com.IncomeTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-moneytracker.com.ReportServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-moneytracker.com.ReportServiceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-moneytracker.com.RepositoryTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-moneytracker.com.TrackManageTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expenses.ser" beforeDir="false" afterPath="$PROJECT_DIR$/expenses.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/incomes.ser" beforeDir="false" afterPath="$PROJECT_DIR$/incomes.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/moneytracker/com/DateUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moneytracker/com/DateUtility.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/moneytracker/com/Expense.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moneytracker/com/Expense.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/moneytracker/com/Income.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moneytracker/com/Income.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/moneytracker/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moneytracker/com/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/moneytracker/com/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moneytracker/com/ReportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/moneytracker/com/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moneytracker/com/Repository.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/moneytracker/com/TrackManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moneytracker/com/TrackManage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/moneytracker/com/DateUtilityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/moneytracker/com/DateUtilityTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/moneytracker/com/ExpenseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/moneytracker/com/ExpenseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/moneytracker/com/IncomeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/moneytracker/com/IncomeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/moneytracker/com/ReportServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/moneytracker/com/ReportServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/moneytracker/com/TrackManageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/moneytracker/com/TrackManageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +128,11 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -97,7 +142,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'MyProject1.test'">
+  <component name="RunManager" selected="Gradle.ReportServiceTest">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -128,12 +173,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ExpenseTest.getAmount" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="IncomeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;moneytracker.com.ExpenseTest.getAmount&quot;" />
+        <option name="scriptParameters" value="--tests &quot;moneytracker.com.IncomeTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -147,12 +192,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ExpenseTest.getExpenseType" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ReportServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;moneytracker.com.ExpenseTest.getExpenseType&quot; --debug" />
+        <option name="scriptParameters" value="--tests &quot;moneytracker.com.ReportServiceTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -166,12 +211,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ExpenseTest.setAmount" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ReportServiceTest.getExpenses" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;moneytracker.com.ExpenseTest.setAmount&quot;" />
+        <option name="scriptParameters" value="--tests &quot;moneytracker.com.ReportServiceTest.getExpenses&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -185,12 +230,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Tests in 'MyProject1.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ReportServiceTest.getIncomes" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests *" />
+        <option name="scriptParameters" value="--tests &quot;moneytracker.com.ReportServiceTest.getIncomes&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -206,11 +251,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Tests in 'MyProject1.test'" />
+        <item itemvalue="Gradle.ReportServiceTest" />
+        <item itemvalue="Gradle.ReportServiceTest.getIncomes" />
+        <item itemvalue="Gradle.ReportServiceTest.getExpenses" />
+        <item itemvalue="Gradle.IncomeTest" />
         <item itemvalue="Gradle.ExpenseTest" />
-        <item itemvalue="Gradle.ExpenseTest.setAmount" />
-        <item itemvalue="Gradle.ExpenseTest.getAmount" />
-        <item itemvalue="Gradle.ExpenseTest.getExpenseType" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +268,7 @@
       <option name="presentableId" value="Default" />
       <updated>1602504067647</updated>
       <workItem from="1602504071164" duration="21000" />
-      <workItem from="1603268181523" duration="18987000" />
+      <workItem from="1603268181523" duration="30714000" />
     </task>
     <task id="LOCAL-00001" summary="Added tests">
       <created>1603268742241</created>
@@ -248,29 +293,33 @@
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state x="426" y="243" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.830@0.23.1440.830" timestamp="1603270617819" />
+    <state x="445" y="140" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1603465883722">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="445" y="140" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.830@0.23.1440.830" timestamp="1603465883722" />
     <state x="295" y="23" key="CommitChangelistDialog2" timestamp="1603268741955">
       <screen x="0" y="23" width="1440" height="831" />
     </state>
     <state x="295" y="23" key="CommitChangelistDialog2/0.23.1440.831@0.23.1440.831" timestamp="1603268741955" />
-    <state width="1398" height="212" key="GridCell.Tab.0.bottom" timestamp="1603456662089">
+    <state width="1398" height="291" key="GridCell.Tab.0.bottom" timestamp="1603466182245">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
-    <state width="1398" height="212" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" timestamp="1603456662089" />
+    <state width="1398" height="291" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" timestamp="1603466182245" />
     <state width="1398" height="212" key="GridCell.Tab.0.bottom/0.23.1440.831@0.23.1440.831" timestamp="1603456137782" />
-    <state width="1398" height="212" key="GridCell.Tab.0.center" timestamp="1603456662089">
+    <state width="1398" height="291" key="GridCell.Tab.0.center" timestamp="1603466182244">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
-    <state width="1398" height="212" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" timestamp="1603456662089" />
+    <state width="1398" height="291" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" timestamp="1603466182244" />
     <state width="1398" height="212" key="GridCell.Tab.0.center/0.23.1440.831@0.23.1440.831" timestamp="1603456137781" />
-    <state width="1398" height="212" key="GridCell.Tab.0.left" timestamp="1603456662088">
+    <state width="1398" height="291" key="GridCell.Tab.0.left" timestamp="1603466182244">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
-    <state width="1398" height="212" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" timestamp="1603456662088" />
+    <state width="1398" height="291" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" timestamp="1603466182244" />
     <state width="1398" height="212" key="GridCell.Tab.0.left/0.23.1440.831@0.23.1440.831" timestamp="1603456137781" />
-    <state width="1398" height="212" key="GridCell.Tab.0.right" timestamp="1603456662089">
+    <state width="1398" height="291" key="GridCell.Tab.0.right" timestamp="1603466182244">
       <screen x="0" y="23" width="1440" height="830" />
     </state>
-    <state width="1398" height="212" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1603456662089" />
+    <state width="1398" height="291" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1603466182244" />
     <state width="1398" height="212" key="GridCell.Tab.0.right/0.23.1440.831@0.23.1440.831" timestamp="1603456137782" />
     <state width="1398" height="264" key="GridCell.Tab.1.bottom" timestamp="1603453584329">
       <screen x="0" y="23" width="1440" height="830" />
@@ -288,6 +337,10 @@
       <screen x="0" y="23" width="1440" height="830" />
     </state>
     <state width="1398" height="264" key="GridCell.Tab.1.right/0.23.1440.830@0.23.1440.830" timestamp="1603453584329" />
+    <state x="208" y="23" width="1024" height="830" key="SettingsEditor" timestamp="1603458489034">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="208" y="23" width="1024" height="830" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1603458489034" />
     <state x="320" y="174" key="Vcs.Push.Dialog.v2" timestamp="1603268748583">
       <screen x="0" y="23" width="1440" height="831" />
     </state>
@@ -300,5 +353,9 @@
       <screen x="0" y="23" width="1440" height="831" />
     </state>
     <state x="468" y="154" key="git4idea.branch.GitSmartOperationDialog/0.23.1440.831@0.23.1440.831" timestamp="1603268257608" />
+    <state x="563" y="212" key="refactoring.ChangeSignatureDialog" timestamp="1603462048093">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="563" y="212" key="refactoring.ChangeSignatureDialog/0.23.1440.830@0.23.1440.830" timestamp="1603462048093" />
   </component>
 </project>

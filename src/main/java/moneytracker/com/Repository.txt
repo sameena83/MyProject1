@@ -6,11 +6,10 @@ import java.util.List;
 public class Repository {
 
     //
-    private static Repository repository;
     //  here object is StoreData and the the instance is created
-    public List<Expense> expenses;
+    private  List<Expense> expenses;
 
-    public List<Income>incomes;
+    private  List<Income>incomes;
     //public List<Savings>income=new ArrayList<>();
 
 
@@ -33,17 +32,7 @@ public class Repository {
 
     }
 
-    //TO CALL PRIVATE CONSTRUCTOR,STATIC ONE,if you want to create object ,call this method and this method will provide
-    //you with object conditionally
-    public  static Repository getRepository(){
 
-          //if collection is null .it creates
-        if(repository==null) {
-            repository= new Repository();
-        }
-        return repository;
-
-    }
 
 }
 
