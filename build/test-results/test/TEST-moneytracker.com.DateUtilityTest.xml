@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="moneytracker.com.DateUtilityTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-10-23T12:38:34" hostname="SDA-23-mbpro" time="0.018">
+  <properties/>
+  <testcase name="getYear()" classname="moneytracker.com.DateUtilityTest" time="0.007"/>
+  <testcase name="stringToDate()" classname="moneytracker.com.DateUtilityTest" time="0.002"/>
+  <testcase name="getYearAndMonth()" classname="moneytracker.com.DateUtilityTest" time="0.002"/>
+  <testcase name="dateToString()" classname="moneytracker.com.DateUtilityTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

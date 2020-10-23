@@ -5,14 +5,12 @@ import java.util.List;
 //This class is used as a collection,i mean store Data's and its a singleton
 public class Repository {
 
-
-
     //
     private static Repository repository;
     //  here object is StoreData and the the instance is created
-    public List<Expense> expenses=new ArrayList<>();
+    public List<Expense> expenses;
 
-    public List<Income>incomes=new ArrayList<>();
+    public List<Income>incomes;
     //public List<Savings>income=new ArrayList<>();
 
 
@@ -22,7 +20,16 @@ public class Repository {
     // A singleton class is one which limits the number of objects creation to one.
     // Using private constructor we can ensure that no more than one object can be created at a time.
 
-    private Repository(){
+    public Repository(){
+
+    }
+
+    public Repository(Object in, Object ex)
+    {
+        if (in == null)
+            incomes = new ArrayList<>();
+        else
+            incomes = (ArrayList<Income>) in;
 
     }
 

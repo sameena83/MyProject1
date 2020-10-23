@@ -1,32 +1,55 @@
 package moneytracker.com;
+//import static org.junit.Assert.*;
+
 
 import org.junit.jupiter.api.Test;
+
+import java.lang.reflect.Field;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class ExpenseTest {
 
+
+
+
+
     @Test
-    void getDate() {
+    public void setAmount() {
+        Expense exp=new Expense();
+        exp.setAmount(2.00);
+
+        assertEquals(2.00, exp.getAmount());
+
     }
 
     @Test
-    void setDate() {
+    public void getAmount() throws NoSuchFieldException, IllegalAccessException {
+        Expense exp = new Expense();
+        exp.setAmount(2.00);
+        assertEquals(2.00, exp.getAmount());
+
     }
 
     @Test
-    void getAmount() {
+    public void setExpenseType() {
+        Expense exp=new Expense();
+        exp.setExpenseType("toy");
+        assertEquals("toy", exp.getExpenseType());
+
+
     }
 
-    @Test
-    void setAmount() {
-    }
 
     @Test
-    void getExpenseType() {
+    public void getExpenseType() {
+        Expense exp = new Expense();
+        exp.setExpenseType("toy");
+        String s="toy";
+        assertEquals(s, exp.getExpenseType());
+
+
     }
 
-    @Test
-    void setExpenseType() {
-    }
+
 }

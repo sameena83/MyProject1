@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9aa6a1c-c724-4a03-8dce-22a81e036986" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/expenses.ser" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/incomes.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/moneytracker/com/Expense.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moneytracker/com/Expense.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/moneytracker/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moneytracker/com/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/moneytracker/com/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moneytracker/com/ReportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/moneytracker/com/TrackManage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/moneytracker/com/TrackManage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/moneytracker/com/DateUtilityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/moneytracker/com/DateUtilityTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/moneytracker/com/ExpenseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/moneytracker/com/ExpenseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +32,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -57,17 +67,27 @@
     </option>
   </component>
   <component name="ProjectId" id="1imDqFhEz1KeN82QJ7Zfb7c0Nrb" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -77,7 +97,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.Tests in 'MyProject1.test'">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -89,6 +109,110 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ExpenseTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;moneytracker.com.ExpenseTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ExpenseTest.getAmount" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;moneytracker.com.ExpenseTest.getAmount&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ExpenseTest.getExpenseType" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;moneytracker.com.ExpenseTest.getExpenseType&quot; --debug" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ExpenseTest.setAmount" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;moneytracker.com.ExpenseTest.setAmount&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'MyProject1.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests *" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Tests in 'MyProject1.test'" />
+        <item itemvalue="Gradle.ExpenseTest" />
+        <item itemvalue="Gradle.ExpenseTest.setAmount" />
+        <item itemvalue="Gradle.ExpenseTest.getAmount" />
+        <item itemvalue="Gradle.ExpenseTest.getExpenseType" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -99,14 +223,75 @@
       <option name="presentableId" value="Default" />
       <updated>1602504067647</updated>
       <workItem from="1602504071164" duration="21000" />
-      <workItem from="1603268181523" duration="284000" />
+      <workItem from="1603268181523" duration="18987000" />
     </task>
+    <task id="LOCAL-00001" summary="Added tests">
+      <created>1603268742241</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603268742241</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Added tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added tests" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="426" y="243" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603270617819">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state x="426" y="243" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1440.830@0.23.1440.830" timestamp="1603270617819" />
+    <state x="295" y="23" key="CommitChangelistDialog2" timestamp="1603268741955">
+      <screen x="0" y="23" width="1440" height="831" />
+    </state>
+    <state x="295" y="23" key="CommitChangelistDialog2/0.23.1440.831@0.23.1440.831" timestamp="1603268741955" />
+    <state width="1398" height="212" key="GridCell.Tab.0.bottom" timestamp="1603456662089">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state width="1398" height="212" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" timestamp="1603456662089" />
+    <state width="1398" height="212" key="GridCell.Tab.0.bottom/0.23.1440.831@0.23.1440.831" timestamp="1603456137782" />
+    <state width="1398" height="212" key="GridCell.Tab.0.center" timestamp="1603456662089">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state width="1398" height="212" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" timestamp="1603456662089" />
+    <state width="1398" height="212" key="GridCell.Tab.0.center/0.23.1440.831@0.23.1440.831" timestamp="1603456137781" />
+    <state width="1398" height="212" key="GridCell.Tab.0.left" timestamp="1603456662088">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state width="1398" height="212" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" timestamp="1603456662088" />
+    <state width="1398" height="212" key="GridCell.Tab.0.left/0.23.1440.831@0.23.1440.831" timestamp="1603456137781" />
+    <state width="1398" height="212" key="GridCell.Tab.0.right" timestamp="1603456662089">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state width="1398" height="212" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1603456662089" />
+    <state width="1398" height="212" key="GridCell.Tab.0.right/0.23.1440.831@0.23.1440.831" timestamp="1603456137782" />
+    <state width="1398" height="264" key="GridCell.Tab.1.bottom" timestamp="1603453584329">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state width="1398" height="264" key="GridCell.Tab.1.bottom/0.23.1440.830@0.23.1440.830" timestamp="1603453584329" />
+    <state width="1398" height="264" key="GridCell.Tab.1.center" timestamp="1603453584328">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state width="1398" height="264" key="GridCell.Tab.1.center/0.23.1440.830@0.23.1440.830" timestamp="1603453584328" />
+    <state width="1398" height="264" key="GridCell.Tab.1.left" timestamp="1603453584328">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state width="1398" height="264" key="GridCell.Tab.1.left/0.23.1440.830@0.23.1440.830" timestamp="1603453584328" />
+    <state width="1398" height="264" key="GridCell.Tab.1.right" timestamp="1603453584329">
+      <screen x="0" y="23" width="1440" height="830" />
+    </state>
+    <state width="1398" height="264" key="GridCell.Tab.1.right/0.23.1440.830@0.23.1440.830" timestamp="1603453584329" />
+    <state x="320" y="174" key="Vcs.Push.Dialog.v2" timestamp="1603268748583">
+      <screen x="0" y="23" width="1440" height="831" />
+    </state>
+    <state x="320" y="174" key="Vcs.Push.Dialog.v2/0.23.1440.831@0.23.1440.831" timestamp="1603268748583" />
     <state x="486" y="203" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1603268462217">
       <screen x="0" y="23" width="1440" height="831" />
     </state>

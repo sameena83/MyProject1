@@ -1,10 +1,11 @@
 package moneytracker.com;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Expense {
+public class Expense implements Serializable {
 
-    private String expenseType;//from expense category
+    private String expenseType;
     private Double amount;
     private Date date;
 
